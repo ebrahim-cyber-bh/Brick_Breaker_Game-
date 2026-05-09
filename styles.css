@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000 url('backgrounds/coffee.gif') center center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+#game-container {
+  width: 1000px;
+  height: 750px;
+  background: rgba(0, 0, 0, 0.84);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  color: #fff;
+  font-size: 24px;
+  position: relative;
+  z-index: 10;
+}
+
+#game-area {
+  width: 100%;
+  height: calc(100% - 50px);
+  position: relative;
+}
+
+#bricks-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.brick {
+  position: absolute;
+  width: 60px;
+  height: 22px;
+  border-radius: 3px;
+}
+
+.brick.row-0 { background: linear-gradient(135deg, #FFB5A7, #FCD5CE); }
+.brick.row-1 { background: linear-gradient(135deg, #F08080, #FF7F50); }
+.brick.row-2 { background: linear-gradient(135deg, #F4A261, #E76F51); }
+.brick.row-3 { background: linear-gradient(135deg, #E9C46A, #F4A261); }
+.brick.row-4 { background: linear-gradient(135deg, #f5a158, #f07b16); }
+.brick.row-5 { background: linear-gradient(135deg, #FFB5A7, #FCD5CE); }
+.brick.row-6 { background: linear-gradient(135deg, #F08080, #FF7F50); }
+
+#ball {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+#paddle {
+  position: absolute;
+  width: 150px;
+  height: 15px;
+  background: #f2d1a6;
+  border-radius: 3px;
+  bottom: 70px;
+  left: 425px;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+#overlay.hidden {
+  display: none;
+}
+
+#message {
+  font-size: 56px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#instructions {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.paused #message {
+  color: #ffd700;
+}
+
+.gameover #message {
+  color: #ff6b6b;
+}
+
+.victory #message {
+  color: #43e97b;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Brick Breaker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="game-container">
+    <div id="hud">
+      <span id="score">Score: 0</span>
+      <span id="lives">Lives: 3</span>
+      <span id="time">Time: 0:00</span>
+    </div>
+    <div id="game-area">
+      <div id="bricks-container"></div>
+      <div id="ball"></div>
+      <div id="paddle"></div>
+    </div>
+    <div id="overlay" class="hidden">
+      <div id="message"></div>
+      <div id="instructions">SPACE = Start | A/D or Arrows = Move | ESC = Pause</div>
+    </div>
+  </div>
+  
+  <script src="state.js"></script>
+  <script src="sounds.js"></script>
+  <script src="dom.js"></script>
+  <script src="bricks.js"></script>
+  <script src="gameLogic.js"></script>
+  <script src="update.js"></script>
+  <script src="input.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
